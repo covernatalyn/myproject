@@ -1,0 +1,846 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh-pure.onedns.net/dns-query
+  - https://ada.openbld.net/dns-query
+  - https://223.5.5.5/dns-query
+  - https://223.6.6.6/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies:
+- name: 🇭🇰香港_01-Reality
+  server: 38.207.132.34
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: swdist.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Zt0fmsqXbm9Dvt66ZyvTBl75fzCSZR6wC0sTF3kNBWM
+    short-id: 63cea161
+- name: 🇭🇰香港_02-I
+  server: 8.209.231.84
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: ws
+  tls: true
+  servername: storage-alqp.nodefast.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /spqlll1b
+    headers:
+      Host: storage-alqp.nodefast.xyz
+- name: 🇭🇰香港_02-SS-II
+  server: dx.miloli.me
+  port: 34949
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇭🇰香港-02-SS-III
+  server: sfneran.vxzjv.xyz
+  port: 58280
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇭🇰香港_03-SS-I
+  server: 125.78.88.7
+  port: 37966
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇭🇰香港_04-Reality
+  server: 8.210.117.172
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: MIafRU5uy9hEI6ht7iSbXyugT9Bd8AvnVHOFseB9Dic
+    short-id: 17158b3c
+- name: 🇭🇰香港_05-SS-I
+  server: dx.miloli.me
+  port: 26390
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇺🇸美国_05-Reality
+  server: 38.55.108.55
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: kQRrHuTVV3FT4ouT1jK1Q-Rys8SNFW_RCJf_GLVydFc
+    short-id: 981af8be
+- name: 🇺🇸美国_06-I
+  server: 8.209.231.84
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: ws
+  tls: true
+  servername: storage-pldjku1.nodefast.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /soopaqw
+    headers:
+      Host: storage-pldjku1.nodefast.xyz
+- name: 🇺🇸美国_07-Reality
+  server: 216.40.86.193
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: lol.secure.dyn.riotcdn.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: o7_YwDF-qKFBTZ2iXoJ1I8P69SENwCzvFfjvv3Dt7CM
+    short-id: b04c210d
+- name: 🇹🇼台湾_01-SS-II
+  server: dx.miloli.me
+  port: 31681
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇹🇼台湾_01-SS-III
+  server: nnertn.vxzjv.xyz
+  port: 12770
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇯🇵日本_01-I
+  server: 8.209.231.84
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: ws
+  tls: true
+  servername: storage-apbgj1.nodefast.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /das0d9a1
+    headers:
+      Host: storage-apbgj1.nodefast.xyz
+- name: 🇯🇵日本_01-SS-II
+  server: 125.78.88.7
+  port: 22179
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇯🇵日本_01-SS-IV
+  server: dx.miloli.me
+  port: 49785
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇯🇵日本-01-SS-V
+  server: nnertn.vxzjv.xyz
+  port: 50544
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇯🇵日本_02-Reality
+  server: 102.134.50.27
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: m.media-amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lnHLOvK4pGRKlU84Fbdr62zrieVFFZYcLgyfma3Ke3k
+    short-id: 9df9632f
+- name: 🇸🇬新加坡_01-SS-I（v6）
+  server: 2409:8c54:a820:100::2b
+  port: 19672
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇸🇬新加坡-01-SS-II
+  server: dx.miloli.me
+  port: 6697
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇸🇬新加坡_01-SS-III
+  server: 125.78.88.7
+  port: 34601
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇸🇬新加坡_01-SS-IV
+  server: aws8920.fkfkd.cn
+  port: 14671
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+- name: 🇩🇪德国_01-Reality [x2]
+  server: 205.198.91.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+  network: tcp
+  tls: true
+  servername: mensura.cdn-apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: YXHXLeibvV8FcT_6TejUHjSCbPSYujKmQ-WYlubf4Wg
+    short-id: d517cf1a
+- name: 🇰🇷韩国_01
+  server: nnertn.vxzjv.xyz
+  port: 54064
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ddf394fc-de8b-40e5-8eb4-1951d7c121c0
+proxy-groups:
+- name: Celero
+  type: select
+  proxies:
+  - 自动选择
+  - 故障转移
+  - 🇭🇰香港_01-Reality
+  - 🇭🇰香港_02-I
+  - 🇭🇰香港_02-SS-II
+  - 🇭🇰香港-02-SS-III
+  - 🇭🇰香港_03-SS-I
+  - 🇭🇰香港_04-Reality
+  - 🇭🇰香港_05-SS-I
+  - 🇺🇸美国_05-Reality
+  - 🇺🇸美国_06-I
+  - 🇺🇸美国_07-Reality
+  - 🇹🇼台湾_01-SS-II
+  - 🇹🇼台湾_01-SS-III
+  - 🇯🇵日本_01-I
+  - 🇯🇵日本_01-SS-II
+  - 🇯🇵日本_01-SS-IV
+  - 🇯🇵日本-01-SS-V
+  - 🇯🇵日本_02-Reality
+  - 🇸🇬新加坡_01-SS-I（v6）
+  - 🇸🇬新加坡-01-SS-II
+  - 🇸🇬新加坡_01-SS-III
+  - 🇸🇬新加坡_01-SS-IV
+  - 🇩🇪德国_01-Reality [x2]
+  - 🇰🇷韩国_01
+- name: 自动选择
+  type: url-test
+  proxies:
+  - 🇭🇰香港_01-Reality
+  - 🇭🇰香港_02-I
+  - 🇭🇰香港_02-SS-II
+  - 🇭🇰香港-02-SS-III
+  - 🇭🇰香港_03-SS-I
+  - 🇭🇰香港_04-Reality
+  - 🇭🇰香港_05-SS-I
+  - 🇺🇸美国_05-Reality
+  - 🇺🇸美国_06-I
+  - 🇺🇸美国_07-Reality
+  - 🇹🇼台湾_01-SS-II
+  - 🇹🇼台湾_01-SS-III
+  - 🇯🇵日本_01-I
+  - 🇯🇵日本_01-SS-II
+  - 🇯🇵日本_01-SS-IV
+  - 🇯🇵日本-01-SS-V
+  - 🇯🇵日本_02-Reality
+  - 🇸🇬新加坡_01-SS-I（v6）
+  - 🇸🇬新加坡-01-SS-II
+  - 🇸🇬新加坡_01-SS-III
+  - 🇸🇬新加坡_01-SS-IV
+  - 🇩🇪德国_01-Reality [x2]
+  - 🇰🇷韩国_01
+  url: http://www.gstatic.com/generate_204
+  interval: 86400
+- name: 故障转移
+  type: fallback
+  proxies:
+  - 🇭🇰香港_01-Reality
+  - 🇭🇰香港_02-I
+  - 🇭🇰香港_02-SS-II
+  - 🇭🇰香港-02-SS-III
+  - 🇭🇰香港_03-SS-I
+  - 🇭🇰香港_04-Reality
+  - 🇭🇰香港_05-SS-I
+  - 🇺🇸美国_05-Reality
+  - 🇺🇸美国_06-I
+  - 🇺🇸美国_07-Reality
+  - 🇹🇼台湾_01-SS-II
+  - 🇹🇼台湾_01-SS-III
+  - 🇯🇵日本_01-I
+  - 🇯🇵日本_01-SS-II
+  - 🇯🇵日本_01-SS-IV
+  - 🇯🇵日本-01-SS-V
+  - 🇯🇵日本_02-Reality
+  - 🇸🇬新加坡_01-SS-I（v6）
+  - 🇸🇬新加坡-01-SS-II
+  - 🇸🇬新加坡_01-SS-III
+  - 🇸🇬新加坡_01-SS-IV
+  - 🇩🇪德国_01-Reality [x2]
+  - 🇰🇷韩国_01
+  url: http://www.gstatic.com/generate_204
+  interval: 7200
+rules:
+- DOMAIN-SUFFIX,services.googleapis.cn,Celero
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Celero
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN,developer.apple.com,Celero
+- DOMAIN-SUFFIX,digicert.com,Celero
+- DOMAIN,ocsp.apple.com,Celero
+- DOMAIN,ocsp.comodoca.com,Celero
+- DOMAIN,ocsp.usertrust.com,Celero
+- DOMAIN,ocsp.sectigo.com,Celero
+- DOMAIN,ocsp.verisign.net,Celero
+- DOMAIN-SUFFIX,apple-dns.net,Celero
+- DOMAIN,testflight.apple.com,Celero
+- DOMAIN,sandbox.itunes.apple.com,Celero
+- DOMAIN,itunes.apple.com,Celero
+- DOMAIN-SUFFIX,apps.apple.com,Celero
+- DOMAIN-SUFFIX,blobstore.apple.com,Celero
+- DOMAIN,cvws.icloud-content.com,Celero
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn20.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+- DOMAIN-SUFFIX,edgekey.net,DIRECT
+- DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+- DOMAIN-SUFFIX,mwcname.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN-KEYWORD,amazon,Celero
+- DOMAIN-KEYWORD,google,Celero
+- DOMAIN-KEYWORD,gmail,Celero
+- DOMAIN-KEYWORD,youtube,Celero
+- DOMAIN-KEYWORD,facebook,Celero
+- DOMAIN-SUFFIX,fb.me,Celero
+- DOMAIN-SUFFIX,fbcdn.net,Celero
+- DOMAIN-KEYWORD,twitter,Celero
+- DOMAIN-KEYWORD,instagram,Celero
+- DOMAIN-KEYWORD,dropbox,Celero
+- DOMAIN-SUFFIX,twimg.com,Celero
+- DOMAIN-KEYWORD,blogspot,Celero
+- DOMAIN-SUFFIX,youtu.be,Celero
+- DOMAIN-KEYWORD,whatsapp,Celero
+- DOMAIN-KEYWORD,admarvel,REJECT
+- DOMAIN-KEYWORD,admaster,REJECT
+- DOMAIN-KEYWORD,adsage,REJECT
+- DOMAIN-KEYWORD,adsmogo,REJECT
+- DOMAIN-KEYWORD,adsrvmedia,REJECT
+- DOMAIN-KEYWORD,adwords,REJECT
+- DOMAIN-KEYWORD,adservice,REJECT
+- DOMAIN-SUFFIX,appsflyer.com,REJECT
+- DOMAIN-KEYWORD,domob,REJECT
+- DOMAIN-SUFFIX,doubleclick.net,REJECT
+- DOMAIN-KEYWORD,duomeng,REJECT
+- DOMAIN-KEYWORD,dwtrack,REJECT
+- DOMAIN-KEYWORD,guanggao,REJECT
+- DOMAIN-KEYWORD,lianmeng,REJECT
+- DOMAIN-SUFFIX,mmstat.com,REJECT
+- DOMAIN-KEYWORD,mopub,REJECT
+- DOMAIN-KEYWORD,omgmta,REJECT
+- DOMAIN-KEYWORD,openx,REJECT
+- DOMAIN-KEYWORD,partnerad,REJECT
+- DOMAIN-KEYWORD,pingfore,REJECT
+- DOMAIN-KEYWORD,supersonicads,REJECT
+- DOMAIN-KEYWORD,uedas,REJECT
+- DOMAIN-KEYWORD,umeng,REJECT
+- DOMAIN-KEYWORD,usage,REJECT
+- DOMAIN-SUFFIX,vungle.com,REJECT
+- DOMAIN-KEYWORD,wlmonitor,REJECT
+- DOMAIN-KEYWORD,zjtoolbar,REJECT
+- DOMAIN-SUFFIX,9to5mac.com,Celero
+- DOMAIN-SUFFIX,abpchina.org,Celero
+- DOMAIN-SUFFIX,adblockplus.org,Celero
+- DOMAIN-SUFFIX,adobe.com,Celero
+- DOMAIN-SUFFIX,akamaized.net,Celero
+- DOMAIN-SUFFIX,alfredapp.com,Celero
+- DOMAIN-SUFFIX,amplitude.com,Celero
+- DOMAIN-SUFFIX,ampproject.org,Celero
+- DOMAIN-SUFFIX,android.com,Celero
+- DOMAIN-SUFFIX,angularjs.org,Celero
+- DOMAIN-SUFFIX,aolcdn.com,Celero
+- DOMAIN-SUFFIX,apkpure.com,Celero
+- DOMAIN-SUFFIX,appledaily.com,Celero
+- DOMAIN-SUFFIX,appshopper.com,Celero
+- DOMAIN-SUFFIX,appspot.com,Celero
+- DOMAIN-SUFFIX,arcgis.com,Celero
+- DOMAIN-SUFFIX,archive.org,Celero
+- DOMAIN-SUFFIX,armorgames.com,Celero
+- DOMAIN-SUFFIX,aspnetcdn.com,Celero
+- DOMAIN-SUFFIX,att.com,Celero
+- DOMAIN-SUFFIX,awsstatic.com,Celero
+- DOMAIN-SUFFIX,azureedge.net,Celero
+- DOMAIN-SUFFIX,azurewebsites.net,Celero
+- DOMAIN-SUFFIX,bing.com,Celero
+- DOMAIN-SUFFIX,bintray.com,Celero
+- DOMAIN-SUFFIX,bit.com,Celero
+- DOMAIN-SUFFIX,bit.ly,Celero
+- DOMAIN-SUFFIX,bitbucket.org,Celero
+- DOMAIN-SUFFIX,bjango.com,Celero
+- DOMAIN-SUFFIX,bkrtx.com,Celero
+- DOMAIN-SUFFIX,blog.com,Celero
+- DOMAIN-SUFFIX,blogcdn.com,Celero
+- DOMAIN-SUFFIX,blogger.com,Celero
+- DOMAIN-SUFFIX,blogsmithmedia.com,Celero
+- DOMAIN-SUFFIX,blogspot.com,Celero
+- DOMAIN-SUFFIX,blogspot.hk,Celero
+- DOMAIN-SUFFIX,bloomberg.com,Celero
+- DOMAIN-SUFFIX,box.com,Celero
+- DOMAIN-SUFFIX,box.net,Celero
+- DOMAIN-SUFFIX,cachefly.net,Celero
+- DOMAIN-SUFFIX,chromium.org,Celero
+- DOMAIN-SUFFIX,cl.ly,Celero
+- DOMAIN-SUFFIX,cloudflare.com,Celero
+- DOMAIN-SUFFIX,cloudfront.net,Celero
+- DOMAIN-SUFFIX,cloudmagic.com,Celero
+- DOMAIN-SUFFIX,cmail19.com,Celero
+- DOMAIN-SUFFIX,cnet.com,Celero
+- DOMAIN-SUFFIX,cocoapods.org,Celero
+- DOMAIN-SUFFIX,comodoca.com,Celero
+- DOMAIN-SUFFIX,crashlytics.com,Celero
+- DOMAIN-SUFFIX,culturedcode.com,Celero
+- DOMAIN-SUFFIX,d.pr,Celero
+- DOMAIN-SUFFIX,danilo.to,Celero
+- DOMAIN-SUFFIX,dayone.me,Celero
+- DOMAIN-SUFFIX,db.tt,Celero
+- DOMAIN-SUFFIX,deskconnect.com,Celero
+- DOMAIN-SUFFIX,disq.us,Celero
+- DOMAIN-SUFFIX,disqus.com,Celero
+- DOMAIN-SUFFIX,disquscdn.com,Celero
+- DOMAIN-SUFFIX,dnsimple.com,Celero
+- DOMAIN-SUFFIX,docker.com,Celero
+- DOMAIN-SUFFIX,dribbble.com,Celero
+- DOMAIN-SUFFIX,droplr.com,Celero
+- DOMAIN-SUFFIX,duckduckgo.com,Celero
+- DOMAIN-SUFFIX,dueapp.com,Celero
+- DOMAIN-SUFFIX,dytt8.net,Celero
+- DOMAIN-SUFFIX,edgecastcdn.net,Celero
+- DOMAIN-SUFFIX,edgekey.net,Celero
+- DOMAIN-SUFFIX,edgesuite.net,Celero
+- DOMAIN-SUFFIX,engadget.com,Celero
+- DOMAIN-SUFFIX,entrust.net,Celero
+- DOMAIN-SUFFIX,eurekavpt.com,Celero
+- DOMAIN-SUFFIX,evernote.com,Celero
+- DOMAIN-SUFFIX,fabric.io,Celero
+- DOMAIN-SUFFIX,fast.com,Celero
+- DOMAIN-SUFFIX,fastly.net,Celero
+- DOMAIN-SUFFIX,fc2.com,Celero
+- DOMAIN-SUFFIX,feedburner.com,Celero
+- DOMAIN-SUFFIX,feedly.com,Celero
+- DOMAIN-SUFFIX,feedsportal.com,Celero
+- DOMAIN-SUFFIX,fiftythree.com,Celero
+- DOMAIN-SUFFIX,firebaseio.com,Celero
+- DOMAIN-SUFFIX,flexibits.com,Celero
+- DOMAIN-SUFFIX,flickr.com,Celero
+- DOMAIN-SUFFIX,flipboard.com,Celero
+- DOMAIN-SUFFIX,g.co,Celero
+- DOMAIN-SUFFIX,gabia.net,Celero
+- DOMAIN-SUFFIX,geni.us,Celero
+- DOMAIN-SUFFIX,gfx.ms,Celero
+- DOMAIN-SUFFIX,ggpht.com,Celero
+- DOMAIN-SUFFIX,ghostnoteapp.com,Celero
+- DOMAIN-SUFFIX,git.io,Celero
+- DOMAIN-KEYWORD,github,Celero
+- DOMAIN-SUFFIX,globalsign.com,Celero
+- DOMAIN-SUFFIX,gmodules.com,Celero
+- DOMAIN-SUFFIX,godaddy.com,Celero
+- DOMAIN-SUFFIX,golang.org,Celero
+- DOMAIN-SUFFIX,gongm.in,Celero
+- DOMAIN-SUFFIX,goo.gl,Celero
+- DOMAIN-SUFFIX,goodreaders.com,Celero
+- DOMAIN-SUFFIX,goodreads.com,Celero
+- DOMAIN-SUFFIX,gravatar.com,Celero
+- DOMAIN-SUFFIX,gstatic.com,Celero
+- DOMAIN-SUFFIX,gvt0.com,Celero
+- DOMAIN-SUFFIX,hockeyapp.net,Celero
+- DOMAIN-SUFFIX,hotmail.com,Celero
+- DOMAIN-SUFFIX,icons8.com,Celero
+- DOMAIN-SUFFIX,ifixit.com,Celero
+- DOMAIN-SUFFIX,ift.tt,Celero
+- DOMAIN-SUFFIX,ifttt.com,Celero
+- DOMAIN-SUFFIX,iherb.com,Celero
+- DOMAIN-SUFFIX,imageshack.us,Celero
+- DOMAIN-SUFFIX,img.ly,Celero
+- DOMAIN-SUFFIX,imgur.com,Celero
+- DOMAIN-SUFFIX,imore.com,Celero
+- DOMAIN-SUFFIX,instapaper.com,Celero
+- DOMAIN-SUFFIX,ipn.li,Celero
+- DOMAIN-SUFFIX,is.gd,Celero
+- DOMAIN-SUFFIX,issuu.com,Celero
+- DOMAIN-SUFFIX,itgonglun.com,Celero
+- DOMAIN-SUFFIX,itun.es,Celero
+- DOMAIN-SUFFIX,ixquick.com,Celero
+- DOMAIN-SUFFIX,j.mp,Celero
+- DOMAIN-SUFFIX,js.revsci.net,Celero
+- DOMAIN-SUFFIX,jshint.com,Celero
+- DOMAIN-SUFFIX,jtvnw.net,Celero
+- DOMAIN-SUFFIX,justgetflux.com,Celero
+- DOMAIN-SUFFIX,kat.cr,Celero
+- DOMAIN-SUFFIX,klip.me,Celero
+- DOMAIN-SUFFIX,libsyn.com,Celero
+- DOMAIN-SUFFIX,linkedin.com,Celero
+- DOMAIN-SUFFIX,line-apps.com,Celero
+- DOMAIN-SUFFIX,linode.com,Celero
+- DOMAIN-SUFFIX,lithium.com,Celero
+- DOMAIN-SUFFIX,littlehj.com,Celero
+- DOMAIN-SUFFIX,live.com,Celero
+- DOMAIN-SUFFIX,live.net,Celero
+- DOMAIN-SUFFIX,livefilestore.com,Celero
+- DOMAIN-SUFFIX,llnwd.net,Celero
+- DOMAIN-SUFFIX,macid.co,Celero
+- DOMAIN-SUFFIX,macromedia.com,Celero
+- DOMAIN-SUFFIX,macrumors.com,Celero
+- DOMAIN-SUFFIX,mashable.com,Celero
+- DOMAIN-SUFFIX,mathjax.org,Celero
+- DOMAIN-SUFFIX,medium.com,Celero
+- DOMAIN-SUFFIX,mega.co.nz,Celero
+- DOMAIN-SUFFIX,mega.nz,Celero
+- DOMAIN-SUFFIX,megaupload.com,Celero
+- DOMAIN-SUFFIX,microsofttranslator.com,Celero
+- DOMAIN-SUFFIX,mindnode.com,Celero
+- DOMAIN-SUFFIX,mobile01.com,Celero
+- DOMAIN-SUFFIX,modmyi.com,Celero
+- DOMAIN-SUFFIX,msedge.net,Celero
+- DOMAIN-SUFFIX,myfontastic.com,Celero
+- DOMAIN-SUFFIX,name.com,Celero
+- DOMAIN-SUFFIX,nextmedia.com,Celero
+- DOMAIN-SUFFIX,nsstatic.net,Celero
+- DOMAIN-SUFFIX,nssurge.com,Celero
+- DOMAIN-SUFFIX,nyt.com,Celero
+- DOMAIN-SUFFIX,nytimes.com,Celero
+- DOMAIN-SUFFIX,omnigroup.com,Celero
+- DOMAIN-SUFFIX,onedrive.com,Celero
+- DOMAIN-SUFFIX,onenote.com,Celero
+- DOMAIN-SUFFIX,ooyala.com,Celero
+- DOMAIN-SUFFIX,openvpn.net,Celero
+- DOMAIN-SUFFIX,openwrt.org,Celero
+- DOMAIN-SUFFIX,orkut.com,Celero
+- DOMAIN-SUFFIX,osxdaily.com,Celero
+- DOMAIN-SUFFIX,outlook.com,Celero
+- DOMAIN-SUFFIX,ow.ly,Celero
+- DOMAIN-SUFFIX,paddleapi.com,Celero
+- DOMAIN-SUFFIX,parallels.com,Celero
+- DOMAIN-SUFFIX,parse.com,Celero
+- DOMAIN-SUFFIX,pdfexpert.com,Celero
+- DOMAIN-SUFFIX,periscope.tv,Celero
+- DOMAIN-SUFFIX,pinboard.in,Celero
+- DOMAIN-SUFFIX,pinterest.com,Celero
+- DOMAIN-SUFFIX,pixelmator.com,Celero
+- DOMAIN-SUFFIX,pixiv.net,Celero
+- DOMAIN-SUFFIX,playpcesor.com,Celero
+- DOMAIN-SUFFIX,playstation.com,Celero
+- DOMAIN-SUFFIX,playstation.com.hk,Celero
+- DOMAIN-SUFFIX,playstation.net,Celero
+- DOMAIN-SUFFIX,playstationnetwork.com,Celero
+- DOMAIN-SUFFIX,pushwoosh.com,Celero
+- DOMAIN-SUFFIX,rime.im,Celero
+- DOMAIN-SUFFIX,servebom.com,Celero
+- DOMAIN-SUFFIX,sfx.ms,Celero
+- DOMAIN-SUFFIX,shadowsocks.org,Celero
+- DOMAIN-SUFFIX,sharethis.com,Celero
+- DOMAIN-SUFFIX,shazam.com,Celero
+- DOMAIN-SUFFIX,skype.com,Celero
+- DOMAIN-SUFFIX,smartdnsCelero.com,Celero
+- DOMAIN-SUFFIX,smartmailcloud.com,Celero
+- DOMAIN-SUFFIX,sndcdn.com,Celero
+- DOMAIN-SUFFIX,sony.com,Celero
+- DOMAIN-SUFFIX,soundcloud.com,Celero
+- DOMAIN-SUFFIX,sourceforge.net,Celero
+- DOMAIN-SUFFIX,spotify.com,Celero
+- DOMAIN-SUFFIX,squarespace.com,Celero
+- DOMAIN-SUFFIX,sstatic.net,Celero
+- DOMAIN-SUFFIX,st.luluku.pw,Celero
+- DOMAIN-SUFFIX,stackoverflow.com,Celero
+- DOMAIN-SUFFIX,startpage.com,Celero
+- DOMAIN-SUFFIX,staticflickr.com,Celero
+- DOMAIN-SUFFIX,steamcommunity.com,Celero
+- DOMAIN-SUFFIX,symauth.com,Celero
+- DOMAIN-SUFFIX,symcb.com,Celero
+- DOMAIN-SUFFIX,symcd.com,Celero
+- DOMAIN-SUFFIX,tapbots.com,Celero
+- DOMAIN-SUFFIX,tapbots.net,Celero
+- DOMAIN-SUFFIX,tdesktop.com,Celero
+- DOMAIN-SUFFIX,techcrunch.com,Celero
+- DOMAIN-SUFFIX,techsmith.com,Celero
+- DOMAIN-SUFFIX,thepiratebay.org,Celero
+- DOMAIN-SUFFIX,theverge.com,Celero
+- DOMAIN-SUFFIX,time.com,Celero
+- DOMAIN-SUFFIX,timeinc.net,Celero
+- DOMAIN-SUFFIX,tiny.cc,Celero
+- DOMAIN-SUFFIX,tinypic.com,Celero
+- DOMAIN-SUFFIX,tmblr.co,Celero
+- DOMAIN-SUFFIX,todoist.com,Celero
+- DOMAIN-SUFFIX,trello.com,Celero
+- DOMAIN-SUFFIX,trustasiassl.com,Celero
+- DOMAIN-SUFFIX,tumblr.co,Celero
+- DOMAIN-SUFFIX,tumblr.com,Celero
+- DOMAIN-SUFFIX,tweetdeck.com,Celero
+- DOMAIN-SUFFIX,tweetmarker.net,Celero
+- DOMAIN-SUFFIX,twitch.tv,Celero
+- DOMAIN-SUFFIX,txmblr.com,Celero
+- DOMAIN-SUFFIX,typekit.net,Celero
+- DOMAIN-SUFFIX,ubertags.com,Celero
+- DOMAIN-SUFFIX,ublock.org,Celero
+- DOMAIN-SUFFIX,ubnt.com,Celero
+- DOMAIN-SUFFIX,ulyssesapp.com,Celero
+- DOMAIN-SUFFIX,urchin.com,Celero
+- DOMAIN-SUFFIX,usertrust.com,Celero
+- DOMAIN-SUFFIX,v.gd,Celero
+- DOMAIN-SUFFIX,v2ex.com,Celero
+- DOMAIN-SUFFIX,vimeo.com,Celero
+- DOMAIN-SUFFIX,vimeocdn.com,Celero
+- DOMAIN-SUFFIX,vine.co,Celero
+- DOMAIN-SUFFIX,vivaldi.com,Celero
+- DOMAIN-SUFFIX,vox-cdn.com,Celero
+- DOMAIN-SUFFIX,vsco.co,Celero
+- DOMAIN-SUFFIX,vultr.com,Celero
+- DOMAIN-SUFFIX,w.org,Celero
+- DOMAIN-SUFFIX,w3schools.com,Celero
+- DOMAIN-SUFFIX,webtype.com,Celero
+- DOMAIN-SUFFIX,wikiwand.com,Celero
+- DOMAIN-SUFFIX,wikileaks.org,Celero
+- DOMAIN-SUFFIX,wikimedia.org,Celero
+- DOMAIN-SUFFIX,wikipedia.com,Celero
+- DOMAIN-SUFFIX,wikipedia.org,Celero
+- DOMAIN-SUFFIX,windows.com,Celero
+- DOMAIN-SUFFIX,windows.net,Celero
+- DOMAIN-SUFFIX,wire.com,Celero
+- DOMAIN-SUFFIX,wordpress.com,Celero
+- DOMAIN-SUFFIX,workflowy.com,Celero
+- DOMAIN-SUFFIX,wp.com,Celero
+- DOMAIN-SUFFIX,wsj.com,Celero
+- DOMAIN-SUFFIX,wsj.net,Celero
+- DOMAIN-SUFFIX,xda-developers.com,Celero
+- DOMAIN-SUFFIX,xeeno.com,Celero
+- DOMAIN-SUFFIX,xiti.com,Celero
+- DOMAIN-SUFFIX,yahoo.com,Celero
+- DOMAIN-SUFFIX,yimg.com,Celero
+- DOMAIN-SUFFIX,ying.com,Celero
+- DOMAIN-SUFFIX,yoyo.org,Celero
+- DOMAIN-SUFFIX,ytimg.com,Celero
+- DOMAIN-SUFFIX,telegra.ph,Celero
+- DOMAIN-SUFFIX,telegram.org,Celero
+- IP-CIDR,91.108.4.0/22,Celero,no-resolve
+- IP-CIDR,91.108.8.0/21,Celero,no-resolve
+- IP-CIDR,91.108.16.0/22,Celero,no-resolve
+- IP-CIDR,91.108.56.0/22,Celero,no-resolve
+- IP-CIDR,149.154.160.0/20,Celero,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,Celero,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,Celero,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,Celero,no-resolve
+- IP-CIDR,120.232.181.162/32,Celero,no-resolve
+- IP-CIDR,120.241.147.226/32,Celero,no-resolve
+- IP-CIDR,120.253.253.226/32,Celero,no-resolve
+- IP-CIDR,120.253.255.162/32,Celero,no-resolve
+- IP-CIDR,120.253.255.34/32,Celero,no-resolve
+- IP-CIDR,120.253.255.98/32,Celero,no-resolve
+- IP-CIDR,180.163.150.162/32,Celero,no-resolve
+- IP-CIDR,180.163.150.34/32,Celero,no-resolve
+- IP-CIDR,180.163.151.162/32,Celero,no-resolve
+- IP-CIDR,180.163.151.34/32,Celero,no-resolve
+- IP-CIDR,203.208.39.0/24,Celero,no-resolve
+- IP-CIDR,203.208.40.0/24,Celero,no-resolve
+- IP-CIDR,203.208.41.0/24,Celero,no-resolve
+- IP-CIDR,203.208.43.0/24,Celero,no-resolve
+- IP-CIDR,203.208.50.0/24,Celero,no-resolve
+- IP-CIDR,220.181.174.162/32,Celero,no-resolve
+- IP-CIDR,220.181.174.226/32,Celero,no-resolve
+- IP-CIDR,220.181.174.34/32,Celero,no-resolve
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Celero
